@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import StepperForm from './components/StepperForm';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box component="main" height='100vh' maxWidth="100vw" display='flex' alignContent='center' flexDirection="column" justifyContent='center'>
+      <Container maxWidth='sm'>
+        <Typography component="h1" variant="h4" mb={4} align="center" color='secondary'>
+          Multi-Step Form
+        </Typography>
+        <StepperForm />
+      </Container>
+    </Box>
   );
 }
 
